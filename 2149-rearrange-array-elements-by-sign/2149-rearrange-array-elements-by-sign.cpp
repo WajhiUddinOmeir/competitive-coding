@@ -23,14 +23,7 @@ public:
 	        arr[k++]=pos[i++];
 	        arr[k++]=nev[j++];
 	    }
-	    while(i<pos.size())
-	    {
-	        arr[k++]=pos[i++];
-	    }
-	    while(j<nev.size())
-	    {
-	        arr[k++]=nev[j++];
-	    }
+	    
         return arr;
     }
 };
