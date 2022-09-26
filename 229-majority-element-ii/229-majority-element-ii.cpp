@@ -21,16 +21,12 @@ public:
     }
   }
   vector < int > ans;
-  count1 = count2 = 0;
-  for (i = 0; i < n; i++) {
-    if (nums[i] == num1)
-      count1++;
-    else if (nums[i] == num2)
-      count2++;
-  }
+  count1 = count(nums.begin(),nums.end(),num1);
+  count2 = count(nums.begin(),nums.end(),num2);
+  
   if (count1 > sz)
     ans.push_back(num1);
-  if (count2 > sz)
+  if (count2 > sz && num1!=num2)
     ans.push_back(num2);
   return ans;
     }
